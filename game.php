@@ -49,7 +49,7 @@ $result = check($computer, $human);
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dr. Chuck's Rock, Paper, Scissors Game</title>
+<title>1ee026ff, Paper, Scissors Game</title>
 <?php require_once "bootstrap.php"; ?>
 </head>
 <body>
@@ -70,7 +70,7 @@ if ( isset($_REQUEST['name']) ) {
 <option value="2">Scissors</option>
 <option value="3">Test</option>
 </select>
-<input type="submit" value="Play">
+<button type="submit" name="Play">Play</button>
 <input type="submit" name="logout" value="Logout">
 </form>
 

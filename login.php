@@ -7,7 +7,7 @@ if ( isset($_POST['cancel'] ) ) {
 }
 
 $salt = 'XyZzy12*_';
-$stored_hash = 'a8609e8d62c043243c4e201cbb342862';  // Pw is meow123
+$stored_hash = '1a52e17fa899cf40fb04cfc42e6352f1';  // Pw is php123
 
 $failure = false;  // If we have no POST data
 
@@ -18,8 +18,9 @@ if ( isset($_POST['who']) && isset($_POST['pass']) ) {
     } else {
         $check = hash('md5', $salt.$_POST['pass']);
         if ( $check == $stored_hash ) {
+            $who = $_POST['who'];
             // Redirect the browser to game.php
-            header("Location: game.php?name=".urlencode($_POST['who']));
+            header("Location: game.php?name=".urlencode($who));
             return;
         } else {
             $failure = "Incorrect password";
@@ -33,7 +34,7 @@ if ( isset($_POST['who']) && isset($_POST['pass']) ) {
 <html>
 <head>
 <?php require_once "bootstrap.php"; ?>
-<title>Chuck Severance's Login Page</title>
+<title>1ee026ff Login Page</title>
 </head>
 <body>
 <div class="container">
